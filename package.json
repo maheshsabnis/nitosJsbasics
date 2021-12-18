@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {  
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/maheshsabnis/nitosJsbasics/issues"
   },
-  "homepage": "https://github.com/maheshsabnis/nitosJsbasics#readme"
+  "homepage": "https://github.com/maheshsabnis/nitosJsbasics#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-stage-0": "^7.8.3",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }

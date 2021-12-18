@@ -74,4 +74,25 @@
                             - Run Test Scripts
                         - npm run start
                             - Execute the current project
-                -                                
+                - The 'dependencies'
+                    - Section that contains List of Standard Node Package dependencies those are used to RUN the Project
+                        - npm install --save [PACKAGE-NAME]
+                - The 'devDependencies'
+                    - Section that contains list of packages those are used to build and test project
+                        - npm install --save-dev [PACKAGE-NAME]                                         
+        - Packages for Transpiling ES 6
+            - @babel/core
+                - The Transpiler
+            - @babel/cli
+                - The Command Line Tool Package that will be sued to transpile the ES 6 to ES 5/ES 3
+            - @babel/polyfill
+                - Bridge Object Model that will execute 'SOME-ES6-CODE' as it is in browser without generating transpiled code
+            - @babel/preset-env and @babel/preset-stage-0
+                - Packages those are responsible to transpile the Browser Compatible  Code that can be used across all browser (Desktop and Devices)
+                - These will be used by React/ Vue / Angular etc. for integrating their code with Developer Defined ES 6 code   
+            - babel-preset-es2015
+                - ES 6 to ES 5 and ES 3 (IE 8,9, Chrome v-4, FireFox V-4) Support in browser    
+        - npm install -g  @babel/core @babel/cli
+                - Install in Global Scope to access the CLI
+        - npm install --save-dev @babel/core @babel/cli @babel/polyfill @babel/preset-env @babel/preset-stage-0 babel-preset-es2015
+
