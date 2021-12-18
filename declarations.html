@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var x; // declaration, default is 'undefined' because of no value allocation
+        console.log('x = ' + x + ' and typeof x = ' + typeof(x));
+        x = 10; // number
+        console.log('x = ' + x + '  and typeof x = ' + typeof(x));
+        x = 10.4; // number with floating point
+        console.log('x = ' + x + '  and typeof x = ' + typeof(x));
+        x = 'A'; // string
+        console.log('x = ' + x + '  and typeof x = ' + typeof(x));
+        x = "Mahesh";
+        console.log('x = ' + x + '  and typeof x = ' + typeof(x));
+        x = []; // Array as Initial value
+        console.log('x = ' + x + '  and typeof x = ' + typeof(x));
+        x = [10,20,30] // Array with initial data
+        console.log('x = ' + x + '  and typeof x = ' + typeof(x));
+        x = {}; // Empty JSON Object, the object with Key:Value pair
+        console.log('x = ' + x + '  and typeof x = ' + typeof(x));
+        x.FirstName = 'Mahesh'; // Property with its value added Dynamically ib object
+        x.LastName = "Sabnis"; // Property with its value added Dynamically ib object
+        console.log('x = ' + x.FirstName + ' ' + x.LastName+ '  and typeof x = ' + typeof(x));
+        x = {firstName: 'James', lastName: 'Bond'}; // The JSON object with Key:Value pairs
+        console.log('x = ' + x.firstName + ' ' + x.lastName+ '  and typeof x = ' + typeof(x));
+        x = function(){
+            console.log('I am Function Object');
+        }; // storing a function object     
+        console.log('x = ' +  x() + '  and typeof x = ' + typeof(x));
+        x = true; // boolean
+        console.log('x = ' +  x + '  and typeof x = ' + typeof(x));
+        x = new Date(2021,11,18); // the Date Object
+        console.log('x = ' +  x + '  and typeof x = ' + typeof(x));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // declaring function in JavaScript 
+        function printMessage(val){
+            if(val) {
+                // checking 'val' as true
+                var x = 10; // The 'x' is declared in if block
+                console.log('In if condition x = ' + x);
+            }
+            // trying to access x out of the if-block 
+            console.log('Out of if condition x = ' + x); // the dirty read
+            x = 100; // dirty write
+            console.log('Out of if condition after modification x = ' + x);
+        };
+
+        printMessage(true);
+        printMessage(false);
+    </script>
+</head>
+<body>
+    <h1>The JavaScript 'var' Observations</h1>
+</body>
+</html>
