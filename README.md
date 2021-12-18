@@ -95,4 +95,78 @@
         - npm install -g  @babel/core @babel/cli
                 - Install in Global Scope to access the CLI
         - npm install --save-dev @babel/core @babel/cli @babel/polyfill @babel/preset-env @babel/preset-stage-0 babel-preset-es2015
+    - Transpiling the code 
+        - babel [SOURCE-FILE-PATH].js -o [OUTPUT-FILE-PATH].js
+        - In the Project  add a '.babelrc' file
+            - Babel Resource Configuration File, that will use the env preset for transpilation
+# Programming with ES 6
+1. The 'let' keyword
+2. The String Object and its methods
+    - Standard String methods (ES x, where x is Basic JS, 3,5,6,7,8,9....)
+        - toUpperCase(), toLowerCase()
+        - slice(), substr(), concat()
+        - indexOf(), lastIndexOf(),
+    - ES 6 Methods (Needs Transpiler)
+        - search()
+        - Template String or String Interpolation
+        - `${EXPRESSION}`
+            - EXPRESSION will be parsed as JS Object
+            - This could Be string, Numerically Evaluated Expression
+            - HTML
+3. The Array
+    - The Most powerful Data Structure in JS 
+    - Array Iterations
+        - for..loop (Standard JS)
+        - for..in loop (ES 3)
+        - for..of loop (EG 6 Iterator)
+            - This will start iterating from the first-index of the collection and iterate to the end-index by returning each record from the collection    
+                - Internally uses 'Symbol.iterator()'
+    - The 'length' is a property of array that return count of records in array    
+    - Array Data Manipulation methods
+        - push(), add in the last
+        - pop(), remove from the last
+        - shift(), remove from the first 
+        - unshift(), add on the first position
+    - Array Data Rearrangement Methods
+        - sort(), reverse() (ES 6 method)
+    - Array Data Extraction Methods
+        - forEach()
+            - Does not return any data 
+        - filter()
+            - Return a new array based in conditional logic evaluated on source array
+        - map()
+            - Can Manipulate array records and returns the array with modification
+        - find()
+        - indexof()
+        - lastIndexOf()   
+    - Array Modification methods
+        - slice()
+        - splice()
+        - concat()        
+    - Array Analysis method
+        - reduce()
+    - let arr = []; arr = [[],[],[]]; [[[]], [], [[], [[],[],[[],[]]]]]
+4. ES 6 Arrow Operator
+    - If the function accepts Callback function as input parameter, then instead of using callback function we can use array operator as input parameter
+        - Syntax
+            - doWork(function(x,y){.....}); will be replaced by
+            - doWork((x,y)=>{.....})    
+5. JSON Object Facts in JS
+    - let obj = {K:V,K:V};
+    - Managing Object Equality
+    - Comparing Objects based upon Values and Types
+    - Object Methods
+        - Object.assign()
+            - Create a new object at different location 
+            - e.g. let o2 = Object.assign({},o1);
+                - A new blank object is created at new location and the data from o1 is copied into it
+        - Object.create()
+            - Clone a new object based on Source object
+            - Recommended in Object Creational Pattern  
+            - E.g.
+                let o2 = Object.create(o1);
+        - Listing all keys/ properties of object
+            - Object.keys()
+        - LListing values of each property of the object
+            - Object.values();                     
 
