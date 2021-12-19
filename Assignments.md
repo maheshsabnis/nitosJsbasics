@@ -9,7 +9,8 @@ Write a JavaScript for performing following operations on te above string
 2. Find out number of blankspaces
 3. Find out number of Special characters e.g. ., ',',", (), $, etc.
 4. Find out number of number of statements
-5. Find out number of number ans positions of vowels (a,e,i,o,u)
+5. Find out number of number and
+ positions of vowels (a,e,i,o,u)
 6. Find out number of time words 'of', 'the', 'and' occurrs in the string   
 
 2. Define an Array of Employees as follows:

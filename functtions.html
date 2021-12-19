@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./functionsobj/reffunction.js"></script>
+    <script src="./functionsobj/extendreffunction.js"></script>
+    <script>
+        window.onload = function(){
+        // defining an instance of the function object
+        var obj = new MyObject();
+        console.log('====================================');
+        console.log('Get Power ' + obj.power(2,9));
+        console.log('====================================');
+
+        console.log('Sort Data ' + obj.sortAsc(['Mahesh', 'Tejas', 'Neeta', 'Leena']));
+
+        console.log('Get Full Year ' + obj.getYear(new Date()));
+
+        var names = ['James Bond', 'Ethan Hunt', 'Indiana Jones', 'Jason Bourn'];
+        
+        document.getElementById('dv').innerHTML = obj.generateList(names);
+
+        console.log('Sort Decending = ' + obj.sortDesc(['Mahesh', 'Tejas', 'Neeta', 'Leena']));
+        
+        }
+    </script>
+</head>
+<body>
+    <h1>The Function DEMO</h1>
+    <div id="dv"></div>
+</body>
+</html>

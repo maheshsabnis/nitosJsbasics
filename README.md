@@ -169,4 +169,122 @@
             - Object.keys()
         - LListing values of each property of the object
             - Object.values();                     
+6. JavaScript Modularity
+    - An Approach of defining Single-Responsibility Cohesive Layer (or object) in JS Application
+    - Implemented using Various Methodologies
+        - JS Function Approach
+            - Use Function as a 'Class'
+                - Public and Private Declaration
+            - In JS, the function is an object, that is a 'type', thats why it can be used for defining an OBJECT as a reusable set of functionality    
+                - Like Class
+                - The JS 'this' scope object
+                    The 'this' keyword sets the scope for 'content' of the function for 'public-access' 
+            - 3 Approaches for Function Object
+                - The Identifier storing the function in it, aka Ref. Function
+                    - syntax
+                        - let x = function(parameters){this.fn=function(){.....}};
+                            - x is the function object that has a 'constructor function' as function(parameters) and also has publicly exposed scope function as 'f1'   
+                    - The Ref.Function Prototype
+                        - The Function object contains the 'prototype' property that us used to extend the Ref. Function by adding new logic in it
+                            - LIKE Inheritance Concept of OOPs 
+
+                - A Close Type JS Function aka function that returns a Object Literal (aka JSON object with Key/Value pair) for public access   
+                    - Syntax
+                        - function MyFucntionObject(parameters){
+                            return {
+                                Key1:value,
+                                Key2:value,
+                                ....    
+                            };
+                        }     
+                        - The Key1 and Kye2, etc, are the publicly exposed members   
+                - Immediately Invoked Function Expression (IIFE)
+                    - Highest priority JS function definition, that will be executed immediately when the Browser is loaded
+                    - Syntax
+                        - (function(){.........})();
+                            - First Parenthesis represent the Function Object
+                            - Second Parenthesis represents the Invocation
+                            - No Separate Instance is needed to invoke
+                    - This is a PURE JS Module in Large scale JS Applications                           
+        - ES 6 Classes    
+            - Class
+                - The 'class' as a Keyword, that will mapped with function Object
+                    - The 'constructor()' is a standard function
+                    - No-constructor overloading allowed
+                - Access Specifiers
+                    - The default access for methods and properties will be 'public' (No Keyword) 
+                    - Data members will be having 'this.' as prefix for public declaration  
+                    - Use '#' based declarations for 'private' (No-Keyword)
+                        - Babel Plugins for Private Members and Class Properties
+                            - @babel/plugin-proposol-private-methods
+                                - Private Members
+                            - @babel/plugin-proposol-class-properties
+                                - get/set proeprties
+                        - @babel/core 7.0+ the PlugIns for Private Members and Class get/set properties is by default supported          
+                - Access Modifiers
+                    - The 'static' keyword for Static Declaration of methods
+                - What about Abstract Class?
+                    - The 'new' nmonikar of JS is used to check the 'target' class to be instantiated
+                        - The 'new' is an object tha has the 'target' property
+                        - Using the 'target' property we can verify the class being instantiated and if the class to be made as as abstract, then use 'new.target' to prevent the instantiation  
+                            - if(new.target === MyClass) { throw exception} 
+                            - let obj = new MyClass(); this statement will call the if condition   
+            - Inheritance    
+                - The 'extends' keyword
+            - No Overloading Officially available
+                - Use dynamic parameters to a method for Overloading like experience
+                - The JS uses 'arguments' array, this is a default array that represents length and values of parameters passed to method
+                - Use ES 6 'rest parameters'
+                    - This is an internal mutation for the default 'arguments' array by passing variable number of parameters to a method
+                        - syntax:
+                            function doWork(...values){....}
+                                - the 'values' object (internally an arguments array) will be changed based on the number of parameters passed to 'doWork' method
+                                - The '...' is known as 'Object Spread', means modifying the same object by adding new properties and/or data in it
+                - bind() and apply()
+            - No Overriding Supported
+            - In Inheritance 'Up-Casting' and 'Down-Casting' is not allowed        
+7. JS for Professional Application Development
+    - Use a Powerful Collection to store data
+        - Array
+        - Set
+            - a collection that is used to store unique values
+            - Recommended when the data is primitive type e.g. Number, String, etc.
+            - The 'Set' is a Type
+                - Methods
+                    - add(), delete(), has(), clear(), values(), forEach(), -etc.
+                - Property 
+                    - size    
+        - WeakSet
+            - It is collection of Object References
+            - It Stores Object's references only and not any other types
+            - If the Object is Killed, its reference will be removed from WeakSet
+            - Recommended in case of preventing any possible memory leaks in JS application             
+        - Map
+            - Used to store data in Key:Value pair
+            - A Key is primitive type and value can be Array, JSON object, complex type
+            - Recommended to store large amount of data in Browser's application memory 
+            - The 'Map' is a type
+                - Methods
+                    - set(), get(), has()
+                    - entries()
+                - Property
+                    - size    
+    - Define a strategy for Calling externally hosted services
+        - XmlHttpRequest object for receiving Data from External Services
+        - An AJAX object
+            - open('HTTP-METHOD', 'REMOTE-URL', 'USERNAME', 'PASSSWORD', 'ISASYNC');
+                - HTTP-METHOD: GET,POST,PUT,DELETE
+                - ISASYNC: Default is 'true' for Asynchronous calls, we cam make it false for Sync Calls (Not Recommended)
+            - setRequestHeader()
+                - Add HTTP headers in Out-going request
+                    - e.g. Content-Type, Authorization, Version, etc.
+            - send()
+                - Send the request
+                - USed in case of POST and PUT request
+            - onload
+                - Success Callback for successful execution
+            - onerror
+                - if call fails                      
+
+    - Protect The class with its properties from direct access from the consumer             
 
