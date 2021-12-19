@@ -280,11 +280,32 @@
                     - e.g. Content-Type, Authorization, Version, etc.
             - send()
                 - Send the request
-                - USed in case of POST and PUT request
+                - Used in case of POST and PUT request
             - onload
                 - Success Callback for successful execution
             - onerror
                 - if call fails                      
+        - The Promise Object
+            - Promise(Resolve, Reject)
+                - Resolve is the Success Callback and Reject is Error Callback
+                - The Promise object Encapsulate the Asynchronous Operation it
+                - The Subscriber of Promise MUST use the Promise Object to UnpAck Response from Async Operations
+                    - Promise.then(Success-Callback).catch(error-Callback)
 
-    - Protect The class with its properties from direct access from the consumer             
+            - Objects Based on Promise
+                - fetch(), the default ES 7 Package based on ES 6 Promise`
+                - request(), from request package
+                - axios(), from axios package    
+    - Protect The class with its properties from direct access from the consumer  
+        - Proxy Object
+            - AN object that Hides an Actual object and provides the methods and properties of actual object to consumer using 'Proxy-Handler'
+                - Proxy-Handler: Is an object that is consumed by 'Consumer' Application, based on requests made by consumer application, the Proxy-Handler will decide what is provided to consumer from the actual-object
+                - an Implementation of 'Proxy-Pattern'    
+            - The 'Proxy(p1,p2)'
+                - p1: The Target Object
+                - p2: The Handler that will Manage the access of Target object
+                    - get(target, property)
+                        - The 'property' from the 'target' object to be accessed for read
+                    - set(target,property,value)
+                        - Modify the 'property' from the 'target' object using 'value' received from consumer              
 

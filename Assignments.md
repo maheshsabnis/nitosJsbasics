@@ -30,3 +30,23 @@ Add at-least 40 Records. Perform following operations on the array
 2. Generate Separate arrays based on Different DeptName
 3. Print Sum of Salary of Employees per department  
 
+# Date: 19-12-2021
+
+1. Modify the assignment 2 of Date:18-12-2021 for Employee Collection using Map()
+    - The Map will have key as 'DeptName', and value will be Array of Employees as shown in assignment 2.
+    - Perform Following operations on Map()
+        - Create Group of Employees based in DeptName
+        - Sort Every Collection of Employees for Each Department based on Sorted order of EmpName
+2. Use the Promise Object for HTTP PUT and DELETE operation by creating a HttpService class with following methods
+    - get()
+    - post()
+    - put()
+    - delete()
+    - Each of the above method will return 'Promise' object      
+        - URL for update         
+            - https://apiapptrainingnewapp.azurewebsites.net/api/Products/${ProductRowId}  
+            - the data to be updated MUST be passed in Body
+          - URL for delete         
+            - https://apiapptrainingnewapp.azurewebsites.net/api/Products/${ProductRowId}  
+     
+

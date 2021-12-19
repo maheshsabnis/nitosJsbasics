@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        function getData() {
+          let response = window.fetch({
+            url: 'https://apiapptrainingnewapp.azurewebsites.net/api/Products',
+            method: "GET",
+          });
+          return response;
+        }
+
+        getData().then((resp)=>{
+                resp.json()
+            }).then(data=>{
+                console.log(JSON.stringify(data));
+            })
+            .catch((error)=>{
+                console.log(error);
+            });
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
