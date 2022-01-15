@@ -50,3 +50,22 @@ Add at-least 40 Records. Perform following operations on the array
             - https://apiapptrainingnewapp.azurewebsites.net/api/Products/${ProductRowId}  
      
 
+# ADV JS
+
+# Date: 15-Jan-2022 (Today)
+1. Create a Collection of Employees (at least 40 Records) and Perform Folowing Operations on it
+    - List of all Employees Group by DeptName  and Designations
+    - Calculate Sum of Salary for each DeptName Group
+    - Print EMployee from Each group that is Max and Min Salary
+2. CReate a JS Module that have an overloaded functions to rearrange data in array as per the following requirements
+    - if an array is like follows
+        - [10,[20,30], 40,50,60, [70,80,90], 100,110, [120]]
+            - then the array MUST be made as a flat array
+                - [10,20,30,40,50,60,70,80,90,100,110,120]
+        - rearrange()
+            - default result should be:  [10,20,30,40,50,60,70,80,90,100,110,120]
+        - rearrange(sort)
+            - sort in ascending order       
+        - rearrange(reverse)
+            - result will be [120,110,100,90,80,70,60,50,40,30,20,10]
+        - Do this for Numeric and String values     
