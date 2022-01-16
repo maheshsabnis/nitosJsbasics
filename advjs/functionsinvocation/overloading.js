@@ -88,3 +88,5 @@ console.log(obj.find);
 
 let passedStudents = obj.find('Passed'); // return only passed students
 console.log(`Pass Students ${JSON.stringify(passedStudents)}`);
+
+

@@ -45,6 +45,35 @@
                 - use the function reference using 'Function()' object of JavaScript
                     - Function() Used for creating a function at runtime
                 - use the apply() to create object substitution
-                - Dynamic name assignment to a function object          
+                - Dynamic name assignment to a function object    
+    - Memoization   
+        - An optimize technique that is responsible to improve the performance of processing while execution of computer program.
+        - USe Case:
+            - If Expensive Function is called frequently by the caller code and the result generation is time consuming processing or expensive process, we 'cache' the result and if the same result is to be returned then it will be directly returned from Cache                    
+                - The Recursive Function
+    - Think of creating Functions dynamically at runtime instead of writing them during compilation (Parsing-time)
+        - The 'Function' Object
+            - This is a Standard JS object that accepts function arguments and implementation as input parameter and return result   
+            - The Function body with input parameters to the function body is passed as string to the 'Function' object. The JS runtime will parse it as the object and sets its execution context and invoke it for execution      
+    - Generators
+        - Function returns only a single value (or nothing)
+        - in JS we can write a function that can return (aka yield) multiple values one-after-another (like a sequence)
+            - Syntax
+                - function* mygenerator(){ yield 1; yield 2;yield 3;.... }    
+                - e.g. If making a Async call to HTTP API that returns huge data, then to process data and return it in sequence to UI or presenter, create a Generator function               
+                    - Sync Generator that iterates over a collection return ir
+                    - Async Generator, used in case where the generator function performs async operations   
+            - The 'function*' will be internally treated as 'generator' object by JS parser or Runtime. The generator object has the following declarations
+                - next(), method to advance generator to next record in sequence
+                - value, property to read value at current index
+                - done, property that represents that the sequence is over           
 4. Use Patterns While writing the Productive code
+    - Promise
+        - We can call Promises with Promise Chain
+            -e.g. Promise.the().then().then.().........catch().finally();
+        - Dependency Calls 
+            - Subscribe to First Promise Call, Resolve it and then make other dependency promise call...and so.. on    
+        - ES 7+ Recommendations
+            - Use the async/await mechanism for the sequential or dependency promise execution
+            - async is a method modifier which is used is the method is making an 'await'able call      
 5. Declare only those object which are useful
